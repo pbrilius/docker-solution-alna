@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Exception;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redis;
 
 class JobPost extends Controller
 {
@@ -15,7 +16,14 @@ class JobPost extends Controller
      */
     public function __invoke(Request $request)
     {
-        throw new Exception('test exception', 205);
-        return response('test trouble');
+        $sites = json_decode(Redis::get('sites'));
+        $sites[] = [
+            'site' => $request->get('URL'),
+            'css3' => $request->get('CSS3'),
+        ];
+        
+        Redis::set('sites', json_encode($sites));
+
+        return response('', 200);
     }
 }

@@ -10,10 +10,24 @@ services:
       - ./full-stack:/srv/www/vhosts/laravel.app
     depends_on:
       - redis
+    networks:
+      - redis_db
   redis:
     image: redis:latest
     volumes:
       - db_redis:/data
     restart: always
+    networks:
+      redis_db:
+        ipv4_address: 172.16.238.10
+    ports:
+      - 6379:6379
 volumes:
   db_redis: {}
+
+networks:
+  redis_db:
+    ipam:
+      driver: default
+      config:
+        - subnet: "172.16.238.0/24"
