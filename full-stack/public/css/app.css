@@ -31168,6 +31168,22 @@ video {
           animation: bounce 1s infinite;
 }
 
+.d-none {
+  display: none;
+}
+
+.error, .success {
+  color: rgb(87, 82, 78);
+}
+
+.error {
+  background-color: crimson;
+}
+
+.success {
+  background-color: darkcyan;
+}
+
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;
@@ -183887,4 +183903,3 @@ video {
             animation: bounce 1s infinite;
   }
 }
-
