@@ -1895,10 +1895,10 @@ __webpack_require__.r(__webpack_exports__);
       $(".flash-message").addClass("d-none");
       axios__WEBPACK_IMPORTED_MODULE_0___default().post($(event.target).attr("action"), $(event.target).serializeArray()).then(function (response) {
         console.log("OK");
-        $(".flash-message.success").toggleClass("d-none").html(response.data);
+        $(".flash-message.success").toggleClass("d-none").html(response.data).show();
       })["catch"](function (err) {
         console.warn(err);
-        $(".flash-message.error").show().html(err);
+        $(".flash-message.error").toggleClass('d-none').html(err).show();
       });
     }
   }

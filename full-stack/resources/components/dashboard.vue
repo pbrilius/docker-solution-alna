@@ -51,11 +51,11 @@ export default {
       )
         .then((response) => {
           console.log("OK");
-          $(".flash-message.success").toggleClass("d-none").html(response.data);
+          $(".flash-message.success").toggleClass("d-none").html(response.data).show();
         })
         .catch((err) => {
           console.warn(err);
-          $(".flash-message.error").show().html(err);
+          $(".flash-message.error").toggleClass('d-none').html(err).show();
         });
     },
   },

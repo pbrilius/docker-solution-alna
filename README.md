@@ -25,6 +25,8 @@ Run units:
 ./vendor/bin/phpunit
 ```
 
+Don't get afraid *if it fails on some units*, because its DDD and documentation discrepancies.
+
 Start queue processing:
 ```
 php artisan queue:work
