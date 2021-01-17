@@ -18,11 +18,13 @@ class JobPost extends Controller
     {
         $sites = json_decode(Redis::get('sites'));
         $sites[] = [
-            'site' => $request->get('URL'),
-            'css3' => $request->get('CSS3'),
+            'site' => $request->input('0')['value'],
+            'css3' => $request->input(1)['value'],
         ];
         
         Redis::set('sites', json_encode($sites));
+
+        dd(Redis::get('sites'));
 
         return response('', 200);
     }
