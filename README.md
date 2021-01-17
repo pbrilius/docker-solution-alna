@@ -36,6 +36,5 @@ Then navigate to the form and upload some data, e. g. *https://medium.com/swlh/f
 & *article.meteredContent*. After a while - like a 1 min or so, click **Load Crawl Data** button on the grid and results will pop up.
 
 # FAQ
-======
 
 * Cannot append to log file - `sudo chmod -Rv 2777 full-stack/storage/logs`
