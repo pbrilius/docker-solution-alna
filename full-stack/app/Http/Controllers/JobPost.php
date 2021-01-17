@@ -24,8 +24,6 @@ class JobPost extends Controller
         
         Redis::set('sites', json_encode($sites));
 
-        dd(Redis::get('sites'));
-
         return response('', 200);
     }
 }
