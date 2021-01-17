@@ -25,6 +25,9 @@ Run units:
 ./vendor/bin/phpunit
 ```
 
+Then navigate to the form and upload some data, e. g. *https://medium.com/swlh/fun-with-python-3-hacking-instagram-giveaways-35e5b1d51670*
+& *article.meteredContent*. After a while - like a 1 min or so, click **Load Crawl Data** button on the grid and results will pop up.
+
 # FAQ
 ======
 
