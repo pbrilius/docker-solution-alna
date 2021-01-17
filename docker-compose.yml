@@ -1,0 +1,19 @@
+version: "3.3"
+
+services:
+  full-stack:
+    image: veritus4/lamp-docker:Laravel
+    ports:
+      - "2124:2124"
+    restart: always
+    volumes:
+      - ./full-stack:/srv/www/vhosts/laravel.app
+    depends_on:
+      - redis
+  redis:
+    image: redis:latest
+    volumes:
+      - db_redis:/data
+    restart: always
+volumes:
+  db_redis: {}
