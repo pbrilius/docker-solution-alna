@@ -30,6 +30,8 @@ Start queue processing:
 php artisan queue:work
 ```
 
+Get to **Redis** configuration: `REDIS_HOST=172.16.238.10` `.env`.
+
 Then navigate to the form and upload some data, e. g. *https://medium.com/swlh/fun-with-python-3-hacking-instagram-giveaways-35e5b1d51670*
 & *article.meteredContent*. After a while - like a 1 min or so, click **Load Crawl Data** button on the grid and results will pop up.
 
