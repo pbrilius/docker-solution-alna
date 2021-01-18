@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.d-none {
+    display: none;
+}
+
+.error, .success {
+    color: rgb(87, 82, 78);
+}
+
+.error {
+    background-color: crimson;
+}
+
+.success {
+    background-color: rgb(185, 202, 202);
+}
