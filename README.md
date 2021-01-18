@@ -43,7 +43,7 @@ cd laravel.app
 ./vendor/bin/phpunit
 ```
 
-Don't get afraid *if it fails on some units*, because its *DDD* and *documentation* discrepancies.
+Don't get afraid *if it fails on some units*, or *warnings are issued* because its *DDD* and *documentation* discrepancies.
 
 Start queue processing:
 ```
@@ -58,7 +58,7 @@ Get to [http://localhost:2124/dashboard](Dashboard) on the browser.
 
 
 Then navigate to the form and upload some data, e. g. *https://medium.com/swlh/fun-with-python-3-hacking-instagram-giveaways-35e5b1d51670*
-& *article.meteredContent*. After a while - like a 1 min or so, click **Load Crawl Data** button on the grid and results will pop up.
+& *article.meteredContent*. After a while - like a 10s or so, click **Load Crawl Data** button on the grid and results will pop up.
 
 You can try with the next one - *https://pbrilius.medium.com/laravel-docker-conversation-violations-on-compose-instance-for-example-8914a6cc23a3?sk=143bc131cccb93c082bb14fcfcb2cd06* *article.meteredContent*.
 
