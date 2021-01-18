@@ -18,7 +18,8 @@ class CreateArticlesTable extends Migration
             $table->timestamps();
             $table->softDeletes();
             $table->string('URL');
-            $table->text('content');
+            $table->string('CSS3')->default('');
+            $table->text('content')->default('');
         });
     }
 
