@@ -6,6 +6,11 @@ Add the correct *permissions*:
 chmod -Rv o+rw full-stack/storage
 ```
 
+Just in case (*FAQ*) - 
+```
+sudo chmod -Rv 2777 full-stack/storage/logs
+```
+
 Run launching up docker compose `docker-compose up -d`.
 
 Install the assets
@@ -17,7 +22,7 @@ php artisan key:generate;
 npm install
 npm install --save vue jquery;
 ```
-Run `npm run prod` and with the installation, run it again till it's finished.
+Run `npm run prod` and with the installation, run it again (if it asks so) till it's finished.
 
 ## Virtualization
 
@@ -45,7 +50,7 @@ php artisan migrate
 exit
 ```
 
-Run units:
+Run units on *SOLID DDD*:
 ```
 docker container exec -it docker-solution-alna_full-stack_1 /bin/bash
 cd laravel.app
