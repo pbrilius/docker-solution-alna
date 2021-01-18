@@ -1938,6 +1938,16 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 var _require = __webpack_require__(/*! axios */ "./node_modules/axios/index.js"),
     Axios = _require["default"];
 
@@ -1950,9 +1960,19 @@ var _require = __webpack_require__(/*! axios */ "./node_modules/axios/index.js")
   mounted: function mounted() {
     var _this = this;
 
-    Axios.get('api/articles').then(function (response) {
+    Axios.get("api/articles").then(function (response) {
       return _this.articles = response.data;
     });
+  },
+  methods: {
+    refreshGrid: function refreshGrid(event) {
+      var _this2 = this;
+
+      console.log("event propagation - refresh.");
+      Axios.get("api/articles").then(function (response) {
+        return _this2.articles = response.data;
+      });
+    }
   }
 });
 
@@ -30544,24 +30564,40 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("table", { staticClass: "table" }, [
-    _vm._m(0),
-    _vm._v(" "),
+  return _c("div", { staticClass: "container" }, [
     _c(
-      "tbody",
-      _vm._l(_vm.articles, function(article) {
-        return _c("tr", { key: article.id }, [
-          _c("td", [_vm._v(_vm._s(article.id))]),
-          _vm._v(" "),
-          _c("td", [_vm._v(_vm._s(article.URL))]),
-          _vm._v(" "),
-          _c("td", [_vm._v(_vm._s(article.CSS3))]),
-          _vm._v(" "),
-          _c("td", [_vm._v(_vm._s(article.content))])
-        ])
-      }),
-      0
-    )
+      "button",
+      {
+        staticClass:
+          "bg-gradient-to-r from-green-400 to-blue-500 focus:from-pink-500 focus:to-yellow-500 refresh",
+        on: { click: _vm.refreshGrid }
+      },
+      [_vm._v("\n    Load Crawl Data\n  ")]
+    ),
+    _vm._v(" "),
+    _c("table", { staticClass: "table" }, [
+      _vm._m(0),
+      _vm._v(" "),
+      _c(
+        "tbody",
+        _vm._l(_vm.articles, function(article) {
+          return _c("tr", { key: article.id }, [
+            _c("td", [_vm._v(_vm._s(article.id))]),
+            _vm._v(" "),
+            _c("td", [
+              _c("a", { attrs: { href: article.URL } }, [
+                _vm._v(_vm._s(article.URL))
+              ])
+            ]),
+            _vm._v(" "),
+            _c("td", [_vm._v(_vm._s(article.CSS3))]),
+            _vm._v(" "),
+            _c("td", [_vm._v(_vm._s(article.content))])
+          ])
+        }),
+        0
+      )
+    ])
   ])
 }
 var staticRenderFns = [
