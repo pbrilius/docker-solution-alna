@@ -1,4 +1,4 @@
-# project-alna
+# docker-solution-alna
 
 Add the correct *permissions*:
 
@@ -16,7 +16,7 @@ php artisan key:generate;
 npm install
 npm install --save vue jquery;
 ```
-Run `npm run dev` and with the installation, run it again till it's finished.
+Run `npm run prod` and with the installation, run it again till it's finished.
 
 ## Database initialize
 
